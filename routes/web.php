@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TelegramBotController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,11 @@ Route::get('/', function () {
 });
 
 Route::any('/telegram-bot/webhook', [TelegramBotController::class,'getUpdates']);
+
+
+Route::get('auth/google', [LoginController::class, 'redirectToGoogle']);
+Route::get('auth/google/callback', [LoginController::class, 'handleGoogleCallback']);
+
+Route::get('auth/facebook', [LoginController::class, 'redirectToFacebook']);
+Route::get('auth/facebook/callback', [LoginController::class, 'handleFacebookCallback']);
+
