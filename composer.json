@@ -6,6 +6,12 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "backpack/crud": "^5.5",
+        "backpack/filemanager": "^1.1",
+        "backpack/logmanager": "^4.0",
+        "backpack/pagemanager": "^3.0",
+        "backpack/permissionmanager": "^6.0",
+        "backpack/settings": "^3.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "irazasyed/telegram-bot-sdk": "^3.9",
@@ -15,6 +21,7 @@
         "laravel/tinker": "^2.5"
     },
     "require-dev": {
+        "backpack/generators": "^3.3",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",

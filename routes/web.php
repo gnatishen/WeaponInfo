@@ -28,3 +28,6 @@ Route::get('auth/google/callback', [LoginController::class, 'handleGoogleCallbac
 Route::get('auth/facebook', [LoginController::class, 'redirectToFacebook']);
 Route::get('auth/facebook/callback', [LoginController::class, 'handleFacebookCallback']);
 
+
+Route::get('{page}/{subs?}', ['uses' => '\App\Http\Controllers\PageController@index'])
+    ->where(['page' => '^(((?=(?!admin))(?=(?!\/)).))*$', 'subs' => '.*']);
